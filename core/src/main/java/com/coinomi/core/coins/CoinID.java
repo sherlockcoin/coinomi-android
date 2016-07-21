@@ -31,6 +31,7 @@ public enum CoinID {
     REDDCOIN_MAIN(ReddcoinMain.get()),
     PEERCOIN_MAIN(PeercoinMain.get()),
     DASH_MAIN(DashMain.get()),
+	NAVCOIN_MAIN(NavCoinMain.get()),
     NUBITS_MAIN(NuBitsMain.get()),
     NUSHARES_MAIN(NuSharesMain.get()),
     NAMECOIN_MAIN(NamecoinMain.get()),

@@ -47,6 +47,7 @@ import com.coinomi.core.coins.VertcoinMain;
 import com.coinomi.core.coins.VpncoinMain;
 import com.coinomi.core.coins.RichcoinMain;
 import com.coinomi.core.coins.IxcoinMain;
+import com.coinomi.core.coins.NavCoinMain;
 import com.coinomi.core.network.CoinAddress;
 import com.coinomi.stratumj.ServerAddress;
 import com.google.common.collect.ImmutableList;
@@ -214,7 +215,9 @@ public class Constants {
             new CoinAddress(RichcoinMain.get(),     new ServerAddress("richx-cce-1.coinomi.net", 5046),
                                                     new ServerAddress("richx-cce-2.coinomi.net", 5046)),
             new CoinAddress(IxcoinMain.get(),       new ServerAddress("ixc-cce-1.coinomi.net", 5047),
-                                                    new ServerAddress("ixc-cce-2.coinomi.net", 5047))
+                                                    new ServerAddress("ixc-cce-2.coinomi.net", 5047)),
+			new CoinAddress(NavCoinMain.get(),      new ServerAddress("mobile.navcoin.org", 50001),
+                                                    new ServerAddress("mobile2.navcoin.org", 50001))
     );
 
     public static final HashMap<CoinType, Integer> COINS_ICONS;
@@ -230,6 +233,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.PEERCOIN_MAIN.getCoinType(), R.drawable.peercoin);
         COINS_ICONS.put(CoinID.DASH_MAIN.getCoinType(), R.drawable.dash);
         COINS_ICONS.put(CoinID.REDDCOIN_MAIN.getCoinType(), R.drawable.reddcoin);
+		COINS_ICONS.put(CoinID.NAVCOIN_MAIN.getCoinType(), R.drawable.navcoin);
         COINS_ICONS.put(CoinID.NUSHARES_MAIN.getCoinType(), R.drawable.nushares);
         COINS_ICONS.put(CoinID.NUBITS_MAIN.getCoinType(), R.drawable.nubits);
         COINS_ICONS.put(CoinID.BLACKCOIN_MAIN.getCoinType(), R.drawable.blackcoin);
@@ -264,6 +268,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.CLUBCOIN_MAIN.getCoinType(), R.drawable.clubcoin);
         COINS_ICONS.put(CoinID.RICHCOIN_MAIN.getCoinType(), R.drawable.richcoin);
         COINS_ICONS.put(CoinID.IXCOIN_MAIN.getCoinType(), R.drawable.ixcoin);
+		
 
         COINS_BLOCK_EXPLORERS = new HashMap<CoinType, String>();
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://blockchain.info/tx/%s");
@@ -306,6 +311,7 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.EGULDEN_MAIN.getCoinType(), "https://chainz.cryptoid.info/efl/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.RICHCOIN_MAIN.getCoinType(), "https://explorer.richcoin.us/transaction?transaction=%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.IXCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/ixc/tx.dws?%s");
+		COINS_BLOCK_EXPLORERS.put(CoinID.NAVCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/nav/tx.dws?%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
@@ -317,7 +323,7 @@ public class Constants {
     );
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
-            BitcoinMain.get(),
+           BitcoinMain.get(),
             AsiacoinMain.get(),
             AuroracoinMain.get(),
             BatacoinMain.get(),
@@ -339,6 +345,7 @@ public class Constants {
             JumbucksMain.get(),
             LitecoinMain.get(),
             MonacoinMain.get(),
+			NavCoinMain.get(),
             NamecoinMain.get(),
             NeoscoinMain.get(),
             NovacoinMain.get(),
